@@ -1,0 +1,35 @@
+<!--Extends and uses layout.html template-->
+{% extends "layout.html" %}
+{% block content %}
+    {% for post in posts.items %}
+        <!--Post details-->
+        <article class="media content-section">
+            <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#"> {{ post.author.username }}</a><!--displays author username of post-->
+                    <small class="text-muted">{{ post.date_posted.strftime('%d-%m-%Y') }}</small><!--displays date and time of post-->
+                </div>
+                <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
+                <p class="article-content">{{ post.content }}</p>
+            </div>
+        </article>
+    {% endfor %}
+    <!--Pagination-->
+    {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+        {% if page_num %}
+            {% if posts.page == page_num %}
+                <a class="btn btn-dark mb-4" href="{{ url_for('home', page=page_num) }}">{{ page_num }}</a>
+            {% else %}
+                <a class="btn btn-outline-dark mb-4" href="{{ url_for('home', page=page_num) }}">{{ page_num }}</a>
+            {% endif %}
+            
+        <!--Displays "..." if page numbers get too long -->    
+        {% else %}
+            ...
+        {% endif %}
+
+
+    {% endfor %}
+
+{% endblock content %}

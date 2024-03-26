@@ -1,0 +1,145 @@
+/* Backrground image */
+body {
+  background-image: url("images/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-top: 10rem;
+}
+
+.bg-steel {
+  background-color: #5f788a;
+}
+
+/* Navbar */
+.site-header .navbar-nav .nav-link {
+  color: #ffffff;
+  font-size: 24px ! important;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  padding-top: 20px;
+}
+
+/* Navbar scroll animation */
+.sec1 {
+   margin-top:56px;
+}
+.bg-dark {
+  background:#221f6b !important;
+  transition: 0.3s ease;
+}
+.bg-dark.scrolled {
+  background:transparent !important
+}
+
+
+
+/* Navbar hover animation */ 
+
+.w3rcontainer{
+   border: 1px solid 
+#cccfdb;
+   border-radius: 2px;
+} 
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: 
+#ffffff;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* carousel */
+.carousel-img {
+  filter: brightness(50%);
+}
+
+.carousel-caption h5 {
+  color: #ffffff;
+}
+
+.carousel-text {
+  color:  #ffffff;
+}
+
+
+/* content section */
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+.nav-right {
+  justify-content: right;
+}
+
+.btn-dark {
+  background-color: #221f6b;
+}
